@@ -1,0 +1,119 @@
+[
+  {
+    "source": "classic",
+    "bbox": [
+      671,
+      0,
+      537,
+      364
+    ],
+    "x_center_px": 908.089364756023,
+    "y_center_px": 129.94427600346472,
+    "area_px": 115449.88455011546,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic,yolov8",
+    "bbox": [
+      1323,
+      2397,
+      1160,
+      922
+    ],
+    "x_center_px": 1901.7296520672003,
+    "y_center_px": 2816.7978387557514,
+    "area_px": 696931.6921049424,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      425,
+      0,
+      272,
+      205
+    ],
+    "x_center_px": 616.5430378661815,
+    "y_center_px": 77.02702159148282,
+    "area_px": 24300.947875909682,
+    "confidence": 0.4662133713204819
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      1173,
+      0,
+      576,
+      238
+    ],
+    "x_center_px": 1439.3765415374728,
+    "y_center_px": 98.21412893246864,
+    "area_px": 101248.23595061868,
+    "confidence": 0.3834443218135588
+  },
+  {
+    "source": "yolov8",
+    "bbox": [
+      965,
+      1922,
+      444,
+      379
+    ],
+    "x_center_px": 1187.6276329175505,
+    "y_center_px": 2113.827751102296,
+    "area_px": 169558.11285786377,
+    "confidence": 0.27459025382995605
+  },
+  {
+    "source": "yolov8",
+    "bbox": [
+      976,
+      764,
+      383,
+      343
+    ],
+    "x_center_px": 1169.9882713945735,
+    "y_center_px": 938.1805623707116,
+    "area_px": 132582.5810405552,
+    "confidence": 0.26201069355010986
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      1962,
+      0,
+      1059,
+      667
+    ],
+    "x_center_px": 2614.2253033875418,
+    "y_center_px": 235.77492104179115,
+    "area_px": 420909.028072567,
+    "confidence": 0.1702756409668233
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "source": "classic",
+    "bbox": [
+      842,
+      67,
+      155,
+      184
+    ],
+    "x_center_px": 932.9334270962232,
+    "y_center_px": 158.76851371757388,
+    "area_px": 15064.484935515065,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      230,
+      144,
+      146,
+      131
+    ],
+    "x_center_px": 298.19294943416537,
+    "y_center_px": 198.0991192805497,
+    "area_px": 9364.48840229853,
+    "confidence": 0.8074434771910726
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      335,
+      291
+    ],
+    "x_center_px": 145.33236876130417,
+    "y_center_px": 115.50751649110707,
+    "area_px": 53582.906985807625,
+    "confidence": 0.5760723779687734
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  }
+]

@@ -1,0 +1,7 @@
+image_name,count,confidence_threshold
+IMG_1262.HEIC,5,0.45
+IMG_1268.HEIC,2,0.45
+IMG_1269.HEIC,3,0.45
+Image Test 2.jpeg,1,0.45
+Image Test 3.jpeg,0,0.45
+Image test 1.jpeg,5,0.45

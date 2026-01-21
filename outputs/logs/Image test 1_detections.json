@@ -1,0 +1,132 @@
+[
+  {
+    "source": "classic",
+    "bbox": [
+      256,
+      82,
+      23,
+      21
+    ],
+    "x_center_px": 269.8662004332595,
+    "y_center_px": 92.30329503102016,
+    "area_px": 339.49966050033953,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      50,
+      94,
+      36,
+      30
+    ],
+    "x_center_px": 68.76011130946102,
+    "y_center_px": 109.56547259126978,
+    "area_px": 814.4991855008145,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      112,
+      31,
+      32
+    ],
+    "x_center_px": 12.676526684346271,
+    "y_center_px": 127.19472861197444,
+    "area_px": 641.4993585006415,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      230,
+      89,
+      33,
+      31
+    ],
+    "x_center_px": 248.0635988363747,
+    "y_center_px": 104.35023698276834,
+    "area_px": 675.9992991591756,
+    "confidence": 0.964554682912817
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      91,
+      65,
+      31,
+      22
+    ],
+    "x_center_px": 107.31894230481083,
+    "y_center_px": 76.51573603306504,
+    "area_px": 420.9994537503758,
+    "confidence": 0.7707089123989898
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      244,
+      53,
+      24,
+      18
+    ],
+    "x_center_px": 258.642861883854,
+    "y_center_px": 60.67739163036946,
+    "area_px": 229.99945188367192,
+    "confidence": 0.41961795352947506
+  },
+  {
+    "source": "yolov8",
+    "bbox": [
+      62,
+      44,
+      39,
+      28
+    ],
+    "x_center_px": 82.72138709667765,
+    "y_center_px": 60.40458530561023,
+    "area_px": 1166.1029885904325,
+    "confidence": 0.26220884919166565
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  }
+]

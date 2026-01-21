@@ -1,0 +1,41 @@
+[
+  {
+    "source": "classic",
+    "bbox": [
+      126,
+      11,
+      77,
+      62
+    ],
+    "x_center_px": 165.40592351160228,
+    "y_center_px": 44.562186967022654,
+    "area_px": 3103.996896003104,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      140,
+      62,
+      116,
+      83
+    ],
+    "x_center_px": 206.12461493645674,
+    "y_center_px": 99.81460889879571,
+    "area_px": 5086.98746480677,
+    "confidence": 0.4058164378874856
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  }
+]

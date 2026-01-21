@@ -1,0 +1,84 @@
+Executive Summary
+- Built a robust computer vision pipeline to detect and count mushrooms, estimate pixel-based size, and produce normalized map visualizations.
+- Integrated classical CV with pretrained models (YOLOv8, Detectron2, SAM-ready adapter), ensemble fusion, threshold sweeps, and performance logging.
+- Reproducible, configurable via environment variables; outputs include overlays, maps, heatmaps, CSV logs, and optional metrics with ground truth.
+
+Project Overview
+- Objectives: Accurate detection of mushrooms in field images; stable counts; relative size estimates; and consistent image-coordinate maps for downstream inventory/planning.
+- Business Requirements: Clean overlays; threshold-stable counts; believable size ranking; readable normalized maps; reproducible code and outputs.
+- Architecture:
+  - Inputs → Preprocessing (HEIC/HSV/Otsu) → Classical Detector + YOLOv8 + Detectron2 → Ensemble + NMS → SAM mask refinement → Confidence calibration → Visualizations & CSV logs → Optional metrics sweeps.
+- Technology Stack: Python 3.12; OpenCV, NumPy, Matplotlib, Pandas; YOLOv8 (Ultralytics), Detectron2 (optional), SAM (optional); pillow-heif for HEIC.
+
+Input Specifications
+- Sources: Images in `Images/` and `Test Images/` (HEIC/JPEG/PNG). HEIC reading via pillow-heif.
+- Formats: HEIC (`*.HEIC`), JPEG (`*.jpg`, `*.jpeg`), PNG. No metadata required.
+- Validation: Files are checked for readability; failures logged; HEIC support requirement surfaced.
+- Sample Input: `IMG_1262.HEIC` – processed into BGR array; grayscale and HSV derived for segmentation; width/height captured for normalization.
+
+Output Specifications
+- Overlays: Annotated images with bounding boxes, confidence, and per-image count. Path: `outputs/overlays/*_overlay.jpg`.
+- Maps: Per-image 0–1 normalized coordinate plots, dot size ∝ area; combined plot across all images. Path: `outputs/maps/*_map.png`, `combined_map.png`.
+- Heatmaps: Gaussian-blended detection center heatmaps. Path: `outputs/heatmaps/*_heatmap.png`.
+- Logs: Per-image JSON detections including `bbox`, center, area, confidence, and `source` model. Path: `outputs/logs/*_detections.json`.
+- CSVs:
+  - `detections.csv`: `image_name,mushroom_id,x_center_px,y_center_px,area_px,box_w_px,box_h_px,confidence`.
+  - `counts.csv`: `image_name,count,confidence_threshold`.
+  - `size_stats.csv`: `image_name,mean_area_px,median_area_px,top5_largest_px`.
+  - `model_counts.csv`: per-model filtered counts at the selected threshold.
+  - `metrics_fps.csv`: processed images and FPS.
+  - If `GT_JSON` provided: `outputs/metrics/` contains sweep CSVs/plots and summaries for fused and per-model outputs.
+
+Implementation Details
+- Preprocessing: HEIC decoding; grayscale + Gaussian blur; HSV saturation map; Otsu threshold fused with low-saturation mask; morphological open/close.
+- Classical Detection: Distance transform + markers + watershed split; contour features (area, bbox, centroid, perimeter/circularity); local contrast; confidence = 0.7*circularity + 0.3*contrast; per-image IQR calibration.
+- Model Integration: YOLOv8 object detector; Detectron2 optional; SAM segmenter prompts with fused centers to refine masks.
+- Ensemble & NMS: IoU-based clustering and confidence-weighted fusion; suppression via NMS for final set.
+- Visualizations: Overlays with mask tint if available; maps in normalized axes; heatmaps of detection confidence around centers.
+- Configuration: `MODELS`, `YOLO_WEIGHTS`, `D2_CONFIG`, `SAM_CHECKPOINT`, `MUSHROOM_CONF_THR`, `USE_TTA`, `LIMIT_IMAGES`, `GT_JSON`, `SWEEP_*` env vars.
+
+Testing & Validation
+- Unit Tests: Utility tests for IoU/NMS/ensemble (`tests/test_post.py`) and threshold sweeping (`tests/test_metrics.py`).
+- QA: Ran pipeline on all provided images + test images; reviewed overlays for false positives and merged clusters; annotated counts are printed on images.
+- Performance: FPS recorded in `metrics_fps.csv`; TTA increases compute, so use selectively.
+- Metrics: With `GT_JSON`, computes threshold sweeps (precision, recall, F1) and mAP from PR curve; emits CSVs and PR/threshold plots.
+
+Deliverables
+- Code: `dhruv_submission/code/` with modular pipeline and adapters.
+- Outputs: `overlays/`, `maps/`, `heatmaps/`, `logs/`, `detections.csv`, `counts.csv`, `size_stats.csv`, `model_counts.csv`, `metrics_fps.csv`.
+- Documentation: `README.md` with installation/usage/config; this comprehensive `report.txt`.
+- Optional Metrics: `outputs/metrics/` when `GT_JSON` is provided.
+- Deployment: Run via `python dhruv_submission/code/run.py`; enable models/install deps per README.
+- Maintenance: Keep model weights updated; adjust `MUSHROOM_CONF_THR` and `SWEEP_*` as data shifts; add more tests for new features.
+
+Sample Inputs & Outputs (Annotated)
+- Input: `IMG_1262.HEIC` → BGR image; grayscale/HSV computed; size `W,H` used for normalization.
+- Output CSV example (`detections.csv`):
+  - `image_name=IMG_1262.HEIC, mushroom_id=17, x_center_px=842.5, y_center_px=361.3, area_px=1453.0, box_w_px=52, box_h_px=39, confidence=0.82`.
+- Overlay: Box with confidence label; top-left banner shows `count` and `thr`.
+- Map: Points in 0–1 axes, dot size ∝ area; y-axis inverted to match image coordinates.
+
+Challenges & Solutions
+- Overlaps/Clusters: Mushrooms touching merged into single blob → added watershed splitting; optional SAM refinement.
+- Lighting Artifacts: Bright mulch/specular highlights → fused HSV low-saturation with Otsu; confidence combines circularity/contrast; per-image calibration reduces sensitivity.
+- Runtime: TTA improves robustness but costs performance → optional via `USE_TTA`; limit images for demo runs via `LIMIT_IMAGES`.
+
+Recommendations
+- Fine-tune YOLOv8 on domain images for higher precision/recall and stability across scenes.
+- Use SAM with checkpoint for improved mask quality and size estimation accuracy.
+- Extend metrics to mAP@[.5:.95] and confusion analysis per class if class labels are introduced.
+- Add dataset-driven calibration or per-scene auto-threshold selection based on sweep summaries.
+
+Reproducibility & Usage
+- Install: `pip install numpy opencv-python pillow pillow-heif matplotlib pandas ultralytics` (Detectron2/SAM optional per README).
+- Run: `python dhruv_submission/code/run.py` from repo root.
+- Configure: set env vars; see `README.md` for examples.
+
+References
+- Code modules under `dhruv_submission/code/` implement all functionality:
+  - `run.py`: pipeline orchestration and outputs.
+  - `models/*.py`: YOLOv8/Detectron2/SAM adapters.
+  - `utils/post.py`: IoU/NMS/ensemble.
+  - `utils/vis.py`: overlays/heatmaps.
+  - `utils/metrics.py`: PR/mAP sweeps and FPS.
+  - Tests in `code/tests/`.

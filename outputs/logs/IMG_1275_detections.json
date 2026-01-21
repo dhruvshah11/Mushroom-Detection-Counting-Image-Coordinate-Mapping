@@ -1,0 +1,236 @@
+[
+  {
+    "source": "classic",
+    "bbox": [
+      693,
+      683,
+      364,
+      231
+    ],
+    "x_center_px": 874.9337663637679,
+    "y_center_px": 798.484394075539,
+    "area_px": 63278.936721063284,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      1994,
+      2333,
+      547,
+      505
+    ],
+    "x_center_px": 2319.5567293264376,
+    "y_center_px": 2580.6584149684377,
+    "area_px": 175540.82445917555,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      2488,
+      207,
+      278
+    ],
+    "x_center_px": 90.98904071642302,
+    "y_center_px": 2622.836650613293,
+    "area_px": 45621.95437804562,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      1018,
+      2445,
+      391,
+      449
+    ],
+    "x_center_px": 1218.0727649643045,
+    "y_center_px": 2689.0735024604855,
+    "area_px": 103539.39646060354,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      2813,
+      3077,
+      208,
+      216
+    ],
+    "x_center_px": 2925.592416855079,
+    "y_center_px": 3174.099644729457,
+    "area_px": 32513.467486532514,
+    "confidence": 1.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      2252,
+      1106,
+      290,
+      250
+    ],
+    "x_center_px": 2386.181535111703,
+    "y_center_px": 1228.2713042624307,
+    "area_px": 52554.94618092922,
+    "confidence": 0.9765115862796927
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      2611,
+      1132,
+      357,
+      216
+    ],
+    "x_center_px": 2807.1718436593023,
+    "y_center_px": 1238.0055360020808,
+    "area_px": 52144.9374059785,
+    "confidence": 0.8330657809637323
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      135,
+      1636,
+      548,
+      383
+    ],
+    "x_center_px": 397.4782471217138,
+    "y_center_px": 1833.1672865581872,
+    "area_px": 127979.83789482337,
+    "confidence": 0.7894864344501458
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      808,
+      1498,
+      1206,
+      580
+    ],
+    "x_center_px": 1374.1455409047844,
+    "y_center_px": 1788.151622411475,
+    "area_px": 497872.2729215185,
+    "confidence": 0.6847572656811399
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      2144,
+      630,
+      310,
+      231
+    ],
+    "x_center_px": 2289.6636048917735,
+    "y_center_px": 751.8751019306899,
+    "area_px": 47380.41080143518,
+    "confidence": 0.5311790710478643
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      1336,
+      1963,
+      771,
+      602
+    ],
+    "x_center_px": 1765.1327809622255,
+    "y_center_px": 2248.92915189562,
+    "area_px": 258353.1451999291,
+    "confidence": 0.3022380951899614
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      23,
+      3275,
+      377,
+      276
+    ],
+    "x_center_px": 230.5148573548489,
+    "y_center_px": 3402.5908338636264,
+    "area_px": 45477.81497775682,
+    "confidence": 0.2457964739576769
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      3414,
+      233,
+      431
+    ],
+    "x_center_px": 109.41331254773903,
+    "y_center_px": 3640.5076564501965,
+    "area_px": 64511.03917353821,
+    "confidence": 0.13998987584777028
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  },
+  {
+    "source": "classic",
+    "bbox": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "x_center_px": 0.0,
+    "y_center_px": 0.0,
+    "area_px": 0.0,
+    "confidence": 0.0
+  }
+]
